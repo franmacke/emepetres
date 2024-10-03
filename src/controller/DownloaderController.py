@@ -12,7 +12,7 @@ class DownloaderController:
             task1.start()
 
         if video_var.get():
-            task2 = Thread(target=self.downloader.download_media, args=(url, "video"))
+            task2 = Thread(target=self.downloader.download_media, args=(url, "video", on_download_complete))
             task2.start()
         
 
