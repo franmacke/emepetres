@@ -1,5 +1,14 @@
-# Instructions
+# Media Downloader App
 
-pip install -r requirements.txt
+A simple application that allows users to download audio and video content from popular platforms like YouTube, SoundCloud, and more. Just provide the link, and the app will download the content in either MP3 (audio) or MP4 (video) format.
+Features:
 
-python3 script.py video_url
+- Download audio (MP3) or video (MP4) from supported platforms.
+- Supports YouTube, SoundCloud, and other media platforms.
+- Lightweight and easy to use interface.
+
+Usage:
+
+- Provide the link to the media you want to download.
+- Select the format (Audio and/or Video).
+- Download your file!
