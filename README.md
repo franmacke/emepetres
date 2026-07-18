@@ -12,3 +12,22 @@ Usage:
 - Provide the link to the media you want to download.
 - Select the format (Audio and/or Video).
 - Download your file!
+
+## Setup
+
+Requires: Python 3.10+, Node.js (used by yt-dlp for YouTube extraction), and ffmpeg on PATH.
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python script.py
+```
+
+Downloaded files land in `output/audio/` and `output/video/`.
+
+## Build (optional, PyInstaller)
+
+```bash
+.venv/bin/pip install pyinstaller
+.venv/bin/pyinstaller script.spec
+```
