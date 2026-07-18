@@ -3,7 +3,6 @@ OUTPUT_DIR = "output"
 
 YTDL_OPTIONS_AUDIO = {
     "format": "bestaudio/best",
-    "extractaudio": True,
     'outtmpl': OUTPUT_DIR + '/audio/%(extractor)s-%(id)s-%(title)s.%(ext)s',
     "restrictfilenames": True,
     "noplaylist": False,
@@ -24,7 +23,6 @@ YTDL_OPTIONS_AUDIO = {
 YTDL_OPTIONS_VIDEO = {
     "format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
     'outtmpl': OUTPUT_DIR + '/video/%(extractor)s-%(id)s-%(title)s.%(ext)s',
-    # "outtmpl": "%(title)s.%(ext)s",
     "restrictfilenames": True,
     "noplaylist": False,
     "nocheckcertificate": True,
