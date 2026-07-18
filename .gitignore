@@ -1,5 +1,8 @@
+.venv/
 env/
-output/*
-
-
+output/
+build/
+dist/
+__pycache__/
 *.pyc
+*.spec.bak
