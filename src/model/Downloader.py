@@ -9,15 +9,27 @@ class Downloader:
 
         self.is_downloading = True
         downloader = YoutubeDL(YTDL_OPTIONS_AUDIO if type == "audio" else YTDL_OPTIONS_VIDEO)
-    
-        info = downloader.extract_info(url, download=True)
-        
-        self.is_downloading = False
-        
+
+        try:
+            info = downloader.extract_info(url, download=True)
+        except Exception as e:
+            print(f"Download failed: {e}")
+            info = None
+        finally:
+            self.is_downloading = False
+
+        if info is None:
+            print("-----------------")
+            print(f"Could not extract media info for: {url}")
+            print("-----------------")
+            callback()
+            return None
+
         title = info.get("title")
         url = info.get("url")
         duration = info.get("duration")
-        thumbnail = info.get("thumbnails")[0]["url"]
+        thumbnails = info.get("thumbnails") or []
+        thumbnail = thumbnails[0]["url"] if thumbnails else None
         website_url = info.get("webpage_url")
 
         print("-----------------")
