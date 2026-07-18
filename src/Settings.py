@@ -13,6 +13,7 @@ YTDL_OPTIONS_AUDIO = {
     "no_warnings": False,
     "default_search": "auto",
     "source_address": "0.0.0.0",
+    "js_runtimes": {"node": {}},
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
@@ -32,6 +33,7 @@ YTDL_OPTIONS_VIDEO = {
     "no_warnings": False,
     "default_search": "auto",
     "source_address": "0.0.0.0",
+    "js_runtimes": {"node": {}},
     'postprocessors': [{
         'key': 'FFmpegVideoConvertor',
         'preferedformat': 'mp4',
